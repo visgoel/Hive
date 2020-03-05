@@ -1,0 +1,12 @@
+
+ADD JAR /home/datamaking/IdeaProjects/hiveudftest/target/scala-2.11/hiveudftest_2.11-0.1.jar;
+
+CREATE FUNCTION customhiveudf AS 'com.vishal.testudf';
+
+hive> SELECT customhiveudf(NAME) from hivetest1;
+OK
+vis
+dol
+Time taken: 0.249 seconds, Fetched: 2 row(s)
+
+

@@ -1,0 +1,11 @@
+CREATE TABLE IF NOT EXISTS hivetest1(
+name string,
+age int,
+address string
+) 
+ROW FORMAT DELIMITED
+FIELDS TERMINATED BY ","
+LINES TERMINATED BY "\n"
+STORED AS TEXTFILE;
+
+LOAD DATA INPATH '/datasets/samplehive1.csv' INTO table hivetest1;
